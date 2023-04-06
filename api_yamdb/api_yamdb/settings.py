@@ -1,15 +1,15 @@
 import os
 from pathlib import Path
 from django.core.validators import RegexValidator
-
+from dotenv import load_dotenv
 from django.conf.global_settings import DATETIME_INPUT_FORMATS
 
 
 BASE_DIR = Path(__file__).resolve().parent.parent
-
+load_dotenv(os.path.join(BASE_DIR.parent, 'infra/.env')) 
 SECRET_KEY = os.getenv('SECRET_KEY', 'secret')
 
-DEBUG = os.getenv('DEBUG', False)
+DEBUG = bool(int(os.getenv('DEBUG')))
 
 ALLOWED_HOSTS = ['*']
 
