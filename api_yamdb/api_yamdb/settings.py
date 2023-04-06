@@ -6,7 +6,7 @@ from django.conf.global_settings import DATETIME_INPUT_FORMATS
 
 
 BASE_DIR = Path(__file__).resolve().parent.parent
-load_dotenv(os.path.join(BASE_DIR.parent, 'infra/.env')) 
+load_dotenv(os.path.join(BASE_DIR.parent, 'infra/.env'))
 SECRET_KEY = os.getenv('SECRET_KEY', 'secret')
 
 DEBUG = int(os.getenv('DEBUG'))
