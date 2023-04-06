@@ -2,8 +2,6 @@ import os
 from pathlib import Path
 from django.core.validators import RegexValidator
 
-from dotenv import load_dotenv
-
 from django.conf.global_settings import DATETIME_INPUT_FORMATS
 
 
